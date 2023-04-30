@@ -1,0 +1,162 @@
+\hypertarget{classGraph}{}\doxysection{Graph$<$ T $>$ Class Template Reference}
+\label{classGraph}\index{Graph$<$ T $>$@{Graph$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Graph.\+hpp$>$}
+
+
+
+Collaboration diagram for Graph$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classGraph__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraph_a43eab1460b5c8ceaa526b40e56a0fb0c}{$\sim$\+Graph}} ()
+\item 
+void \mbox{\hyperlink{classGraph_a8ebd08a286daa05915d3eccf28f52cd9}{generate\+Pos}} (int x\+\_\+start, int y\+\_\+start, int x\+\_\+size, int y\+\_\+size)
+\begin{DoxyCompactList}\small\item\em 生成节点的坐标 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGraph_a384f6eca08bc7e1363157ee74014e836}{read\+From\+File}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 从文件中读取图的数据并构建图 \end{DoxyCompactList}\item 
+pair$<$ vector$<$ int $>$, vector$<$ int $>$ $>$ \mbox{\hyperlink{classGraph_a92691d3d8b9f01966d74c5922848c094}{dijkstra}} (int start)
+\begin{DoxyCompactList}\small\item\em Dijkstra算法，计算从起点到所有节点的最短距离和最短路径 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ int $>$ \mbox{\hyperlink{classGraph_aa3e5f862876751b307c8369816889f92}{find\+Path}} (int target, const vector$<$ int $>$ \&pre)
+\begin{DoxyCompactList}\small\item\em 根据节点的前驱节点信息，查找起点到目标节点的路径 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{structEdge}{Edge}}$<$ T $>$ $>$ $\ast$ \mbox{\hyperlink{classGraph_a2563ddf9fad08304ea1784fc68583812}{G}}
+\item 
+int \mbox{\hyperlink{classGraph_a36b1ce0110b4d291d7b4317e2314da19}{vex\+\_\+num}}
+\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{classGraph_a1d178bd2958d6ad71132b0a3385d119e}{pos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGraph_a43eab1460b5c8ceaa526b40e56a0fb0c}\label{classGraph_a43eab1460b5c8ceaa526b40e56a0fb0c}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!````~Graph@{$\sim$Graph}}
+\index{````~Graph@{$\sim$Graph}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Graph()}{~Graph()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classGraph}{Graph}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraph_a92691d3d8b9f01966d74c5922848c094}\label{classGraph_a92691d3d8b9f01966d74c5922848c094}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+pair$<$ vector$<$ int $>$, vector$<$ int $>$ $>$ \mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::dijkstra (\begin{DoxyParamCaption}\item[{int}]{start }\end{DoxyParamCaption})}
+
+
+
+Dijkstra算法，计算从起点到所有节点的最短距离和最短路径 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & 起点的编号 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回一个pair，第一个vector存储从起点到每个节点的最短距离，第二个vector存储每个节点的前驱节点编号 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_aa3e5f862876751b307c8369816889f92}\label{classGraph_aa3e5f862876751b307c8369816889f92}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!findPath@{findPath}}
+\index{findPath@{findPath}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{findPath()}{findPath()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+vector$<$ int $>$ \mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::find\+Path (\begin{DoxyParamCaption}\item[{int}]{target,  }\item[{const vector$<$ int $>$ \&}]{pre }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+根据节点的前驱节点信息，查找起点到目标节点的路径 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & 目标节点的编号 \\
+\hline
+{\em pre} & 存储每个节点的前驱节点编号的vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回一个vector，存储起点到目标节点的路径，按顺序存储每个节点的编号 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a8ebd08a286daa05915d3eccf28f52cd9}\label{classGraph_a8ebd08a286daa05915d3eccf28f52cd9}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!generatePos@{generatePos}}
+\index{generatePos@{generatePos}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{generatePos()}{generatePos()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::generate\+Pos (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+start,  }\item[{int}]{y\+\_\+start,  }\item[{int}]{x\+\_\+size,  }\item[{int}]{y\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+生成节点的坐标 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+start} & 节点横坐标起始值 \\
+\hline
+{\em y\+\_\+start} & 节点纵坐标起始值 \\
+\hline
+{\em x\+\_\+size} & 生成的横坐标范围 \\
+\hline
+{\em y\+\_\+size} & 生成的纵坐标范围 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGraph_a384f6eca08bc7e1363157ee74014e836}\label{classGraph_a384f6eca08bc7e1363157ee74014e836}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::read\+From\+File (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+从文件中读取图的数据并构建图 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & 文件名 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGraph_a2563ddf9fad08304ea1784fc68583812}\label{classGraph_a2563ddf9fad08304ea1784fc68583812}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!G@{G}}
+\index{G@{G}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+vector$<$\mbox{\hyperlink{structEdge}{Edge}}$<$T$>$ $>$$\ast$ \mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::G}
+
+\mbox{\Hypertarget{classGraph_a1d178bd2958d6ad71132b0a3385d119e}\label{classGraph_a1d178bd2958d6ad71132b0a3385d119e}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!pos@{pos}}
+\index{pos@{pos}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+vector$<$pair$<$int, int$>$ $>$ \mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::pos}
+
+\mbox{\Hypertarget{classGraph_a36b1ce0110b4d291d7b4317e2314da19}\label{classGraph_a36b1ce0110b4d291d7b4317e2314da19}} 
+\index{Graph$<$ T $>$@{Graph$<$ T $>$}!vex\_num@{vex\_num}}
+\index{vex\_num@{vex\_num}!Graph$<$ T $>$@{Graph$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vex\_num}{vex\_num}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classGraph}{Graph}}$<$ T $>$\+::vex\+\_\+num}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Graph_8hpp}{Graph.\+hpp}}\item 
+include/\mbox{\hyperlink{Graph_8ipp}{Graph.\+ipp}}\end{DoxyCompactItemize}

@@ -1,0 +1,161 @@
+\hypertarget{Tools_8hpp}{}\doxysection{include/\+Tools.hpp File Reference}
+\label{Tools_8hpp}\index{include/Tools.hpp@{include/Tools.hpp}}
+{\ttfamily \#include \char`\"{}bits/stdc++.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tools.\+ipp\char`\"{}}\newline
+Include dependency graph for Tools.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{Tools_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{Tools_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Tools_8hpp_a4df47b3a25b64ed899ac7cea6b80512c}{draw\+Graph}} (sf\+::\+Render\+Window \&window, vector$<$ pair$<$ int, int $>$$>$ pos, vector$<$ int $>$ \&path, bool path\+\_\+state, \mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \&G)
+\begin{DoxyCompactList}\small\item\em 使用\+S\+F\+M\+L图形库绘制由\+Graph对象表示的图形。 \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{Tools_8hpp_ab361fd3f60ae67475c0840667b3ca60d}{create\+Text}} (string content, int x, int y)
+\begin{DoxyCompactList}\small\item\em 创建一个 S\+F\+ML 文本对象，设置其内容、位置和颜色。 \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{Tools_8hpp_a86fcf24a4ca22653f1d8d489352ac5a8}{create\+Rect}} (sf\+::\+Vector2f shape, int x, int y)
+\begin{DoxyCompactList}\small\item\em 创建一个 S\+F\+ML 矩形形状对象，设置其大小、位置、填充颜色和边框样式。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Tools_8hpp_adf1db9478eee5030767c344ce2b42b40}{text\+Input\+Process}} (sf\+::\+Event \&event, sf\+::\+Text \&input\+\_\+text, bool \&input\+\_\+selected)
+\begin{DoxyCompactList}\small\item\em 处理 S\+F\+ML 事件，根据输入框是否被选中，相应输入。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Tools_8hpp_ac799f7482076d736e334ce7e6538ae58}{handle\+Mouse\+Button\+Pressed}} (sf\+::\+Render\+Window \&window, sf\+::\+Event \&event, sf\+::\+Text \&input1\+\_\+text, sf\+::\+Text \&input2\+\_\+text, bool \&input1\+\_\+selected, bool \&input2\+\_\+selected, sf\+::\+Rectangle\+Shape \&input1, sf\+::\+Rectangle\+Shape \&input2, sf\+::\+Rectangle\+Shape \&button, bool \&path\+\_\+state, vector$<$ int $>$ \&path, \mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \&G, sf\+::\+Text \&output\+\_\+text)
+\begin{DoxyCompactList}\small\item\em 处理鼠标左键按下事件,判断点击输入框或提交按钮。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Tools_8hpp_a86fcf24a4ca22653f1d8d489352ac5a8}\label{Tools_8hpp_a86fcf24a4ca22653f1d8d489352ac5a8}} 
+\index{Tools.hpp@{Tools.hpp}!createRect@{createRect}}
+\index{createRect@{createRect}!Tools.hpp@{Tools.hpp}}
+\doxysubsubsection{\texorpdfstring{createRect()}{createRect()}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape create\+Rect (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{shape,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+创建一个 S\+F\+ML 矩形形状对象，设置其大小、位置、填充颜色和边框样式。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & 矩形对象的大小。 \\
+\hline
+{\em x} & 矩形对象的 x 坐标。 \\
+\hline
+{\em y} & 矩形对象的 y 坐标。 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+F\+ML 矩形对象。 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Tools_8hpp_ab361fd3f60ae67475c0840667b3ca60d}\label{Tools_8hpp_ab361fd3f60ae67475c0840667b3ca60d}} 
+\index{Tools.hpp@{Tools.hpp}!createText@{createText}}
+\index{createText@{createText}!Tools.hpp@{Tools.hpp}}
+\doxysubsubsection{\texorpdfstring{createText()}{createText()}}
+{\footnotesize\ttfamily sf\+::\+Text create\+Text (\begin{DoxyParamCaption}\item[{string}]{content,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+创建一个 S\+F\+ML 文本对象，设置其内容、位置和颜色。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content} & 文本对象的内容。 \\
+\hline
+{\em x} & 文本对象的 x 坐标。 \\
+\hline
+{\em y} & 文本对象的 y 坐标。 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+F\+ML 文本对象。 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Tools_8hpp_a4df47b3a25b64ed899ac7cea6b80512c}\label{Tools_8hpp_a4df47b3a25b64ed899ac7cea6b80512c}} 
+\index{Tools.hpp@{Tools.hpp}!drawGraph@{drawGraph}}
+\index{drawGraph@{drawGraph}!Tools.hpp@{Tools.hpp}}
+\doxysubsubsection{\texorpdfstring{drawGraph()}{drawGraph()}}
+{\footnotesize\ttfamily void draw\+Graph (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{vector$<$ pair$<$ int, int $>$$>$}]{pos,  }\item[{vector$<$ int $>$ \&}]{path,  }\item[{bool}]{path\+\_\+state,  }\item[{\mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \&}]{G }\end{DoxyParamCaption})}
+
+
+
+使用\+S\+F\+M\+L图形库绘制由\+Graph对象表示的图形。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & S\+F\+M\+L窗口。 \\
+\hline
+{\em pos} & 顶点(x, y)坐标。 \\
+\hline
+{\em path} & 路径顶点 \\
+\hline
+{\em path\+\_\+state} & 是否绘制路径 \\
+\hline
+{\em G} & 图。 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Tools_8hpp_ac799f7482076d736e334ce7e6538ae58}\label{Tools_8hpp_ac799f7482076d736e334ce7e6538ae58}} 
+\index{Tools.hpp@{Tools.hpp}!handleMouseButtonPressed@{handleMouseButtonPressed}}
+\index{handleMouseButtonPressed@{handleMouseButtonPressed}!Tools.hpp@{Tools.hpp}}
+\doxysubsubsection{\texorpdfstring{handleMouseButtonPressed()}{handleMouseButtonPressed()}}
+{\footnotesize\ttfamily void handle\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{sf\+::\+Event \&}]{event,  }\item[{sf\+::\+Text \&}]{input1\+\_\+text,  }\item[{sf\+::\+Text \&}]{input2\+\_\+text,  }\item[{bool \&}]{input1\+\_\+selected,  }\item[{bool \&}]{input2\+\_\+selected,  }\item[{sf\+::\+Rectangle\+Shape \&}]{input1,  }\item[{sf\+::\+Rectangle\+Shape \&}]{input2,  }\item[{sf\+::\+Rectangle\+Shape \&}]{button,  }\item[{bool \&}]{path\+\_\+state,  }\item[{vector$<$ int $>$ \&}]{path,  }\item[{\mbox{\hyperlink{classGraph}{Graph}}$<$ int $>$ \&}]{G,  }\item[{sf\+::\+Text \&}]{output\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+处理鼠标左键按下事件,判断点击输入框或提交按钮。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & 游戏窗口对象 \\
+\hline
+{\em event} & 事件对象 \\
+\hline
+{\em input1\+\_\+text} & 输入框1文本对象 \\
+\hline
+{\em input2\+\_\+text} & 输入框2文本对象 \\
+\hline
+{\em input1\+\_\+selected} & 输入框1选中状态 \\
+\hline
+{\em input2\+\_\+selected} & 输入框2选中状态 \\
+\hline
+{\em input1} & 输入框1矩形对象 \\
+\hline
+{\em input2} & 输入框2矩形对象 \\
+\hline
+{\em button} & 按钮对象 \\
+\hline
+{\em path\+\_\+state} & 路径状态 \\
+\hline
+{\em path} & 路径数组 \\
+\hline
+{\em G} & 图对象 \\
+\hline
+{\em output\+\_\+text} & 输出文本对象 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Tools_8hpp_adf1db9478eee5030767c344ce2b42b40}\label{Tools_8hpp_adf1db9478eee5030767c344ce2b42b40}} 
+\index{Tools.hpp@{Tools.hpp}!textInputProcess@{textInputProcess}}
+\index{textInputProcess@{textInputProcess}!Tools.hpp@{Tools.hpp}}
+\doxysubsubsection{\texorpdfstring{textInputProcess()}{textInputProcess()}}
+{\footnotesize\ttfamily void text\+Input\+Process (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{sf\+::\+Text \&}]{input\+\_\+text,  }\item[{bool \&}]{input\+\_\+selected }\end{DoxyParamCaption})}
+
+
+
+处理 S\+F\+ML 事件，根据输入框是否被选中，相应输入。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & S\+F\+ML 事件对象。 \\
+\hline
+{\em input\+\_\+text} & 要处理的 S\+F\+ML 文本对象，表示输入框中的文本。 \\
+\hline
+{\em input\+\_\+selected} & 表示输入框是否被选中。 \\
+\hline
+\end{DoxyParams}
